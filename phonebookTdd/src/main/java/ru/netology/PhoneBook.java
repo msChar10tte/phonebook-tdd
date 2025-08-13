@@ -24,8 +24,12 @@ public class PhoneBook {
         return contactsByName.get(name);
     }
 
+//    public List<String> printAllNames() {
+//        return new ArrayList<>(contactsByName.keySet());
+//    }
+
     public List<String> printAllNames() {
-        return new ArrayList<>(contactsByName.keySet());
+        return null;
     }
 
 }
