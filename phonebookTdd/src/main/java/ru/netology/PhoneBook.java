@@ -3,19 +3,17 @@ import java.util.*;
 
 public class PhoneBook {
 
-    // Хранит пары "Имя -> Номер". TreeMap автоматически сортирует ключи (имена)
     private final Map<String, String> contactsByName = new TreeMap<>();
 
-    // Хранит пары "Номер -> Имя" для быстрого поиска по номеру
     private final Map<String, String> contactsByNumber = new HashMap<>();
 
-    public int add(String name, String number) {
-        if (!contactsByName.containsKey(name)) {
-            contactsByName.put(name, number);
-            contactsByNumber.put(number, name);
-        }
-        return contactsByName.size();
-    }
+//    public int add(String name, String number) {
+//        if (!contactsByName.containsKey(name)) {
+//            contactsByName.put(name, number);
+//            contactsByNumber.put(number, name);
+//        }
+//        return contactsByName.size();
+//    }
 
     public String findByNumber(String number) {
         return contactsByNumber.get(number);
@@ -28,5 +26,9 @@ public class PhoneBook {
     public List<String> printAllNames() {
         // TreeMap возвращает ключи в отсортированном порядке
         return new ArrayList<>(contactsByName.keySet());
+    }
+
+    public int add(String name, String number) {
+        return 0;
     }
 }
