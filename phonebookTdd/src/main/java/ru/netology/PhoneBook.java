@@ -20,8 +20,12 @@ public class PhoneBook {
         return contactsByNumber.get(number);
     }
 
+//    public String findByName(String name) {
+//        return contactsByName.get(name);
+//    }
+
     public String findByName(String name) {
-        return contactsByName.get(name);
+        return null;
     }
 
     public List<String> printAllNames() {
