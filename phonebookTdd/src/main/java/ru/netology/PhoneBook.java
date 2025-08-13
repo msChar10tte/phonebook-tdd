@@ -16,8 +16,12 @@ public class PhoneBook {
         return contactsByName.size();
     }
 
+//    public String findByNumber(String number) {
+//        return contactsByNumber.get(number);
+//    }
+
     public String findByNumber(String number) {
-        return contactsByNumber.get(number);
+        return null;
     }
 
     public String findByName(String name) {
@@ -25,7 +29,6 @@ public class PhoneBook {
     }
 
     public List<String> printAllNames() {
-        // TreeMap возвращает ключи в отсортированном порядке
         return new ArrayList<>(contactsByName.keySet());
     }
 
