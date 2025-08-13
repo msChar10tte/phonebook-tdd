@@ -22,7 +22,7 @@ public class PhoneBookTest {
         assertEquals(1, countAfterAdd);
 
         int countAfterDuplicateAdd = phoneBook.add("John Doe", "987654321");
-        assertEquals(1, countAfterDuplicateAdd); // Размер не должен измениться
+        assertEquals(1, countAfterDuplicateAdd);
     }
 
     @Test
