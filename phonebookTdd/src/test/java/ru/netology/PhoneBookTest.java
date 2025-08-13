@@ -16,16 +16,14 @@ public class PhoneBookTest {
         phoneBook = new PhoneBook();
     }
 
-//    @Test
-//    public void testAdd() {
-//        // Добавление нового контакта
-//        int countAfterAdd = phoneBook.add("John Doe", "123456789");
-//        assertEquals(1, countAfterAdd);
-//
-//        // Попытка добавить существующий контакт
-//        int countAfterDuplicateAdd = phoneBook.add("John Doe", "987654321");
-//        assertEquals(1, countAfterDuplicateAdd); // Размер не должен измениться
-//    }
+    @Test
+    public void testAdd() {
+        int countAfterAdd = phoneBook.add("John Doe", "123456789");
+        assertEquals(1, countAfterAdd);
+
+        int countAfterDuplicateAdd = phoneBook.add("John Doe", "987654321");
+        assertEquals(1, countAfterDuplicateAdd); // Размер не должен измениться
+    }
 
     @Test
     public void testFindByNumber() {
@@ -63,17 +61,5 @@ public class PhoneBookTest {
         List<String> actual = phoneBook.printAllNames();
 
         assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testAdd() {
-        PhoneBook phoneBook = new PhoneBook();
-        // Добавление нового контакта
-        int countAfterAdd = phoneBook.add("John Doe", "123456789");
-        assertEquals(1, countAfterAdd); // Этот тест упадет
-
-        // Попытка добавить существующий контакт
-        int countAfterDuplicateAdd = phoneBook.add("John Doe", "987654321");
-        assertEquals(1, countAfterDuplicateAdd); // Этот тест тоже упадет
     }
 }
